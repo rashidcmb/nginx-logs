@@ -8,7 +8,7 @@
 
 ### Build Docker Image
 
-nginx can also be run as a system service with same nginx configuration. nginx docker container since is ligter and allows to run on any port.  
+nginx can also be run as a system service with same nginx configuration. nginx docker container since is lighter and allows to run on any port.  
 
   - Clone github repo - `git clone https://github.com/rashidcmb/nginx-logs.git`
   - Run `docker build -t nginx-logs .` 
@@ -30,3 +30,9 @@ Verify the deployment by navigating to your server address in your preferred bro
 127.0.0.1:8080
 ```
 
+Alternatively you can run the container directly by pulling my public docker image as below
+
+### docker run -d -p 80:80 --restart="always" -v /logs:/logs rashiddocker/nginx-logs
+
+Change '-p' parameter to change the exposed port. Format for the same -p host-port:container-port
+Change '-v' parameter to change the directory that you would like to browse via browser however files will be always accessible with apending '/logs' to host as 'http://IP:port/logs'
