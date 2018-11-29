@@ -21,7 +21,7 @@ nginx can also be run as a system service with same nginx configuration. nginx d
 Once done, run the Docker image and map the port to whatever you wish on your host. In this example, we simply map port 80 of the host to port 80 of the Docker
 
 ```sh
-docker run -d -p 80:80 --restart="always" -v /logs:/logs logs
+docker run -d -p 80:80 --restart="always" -v /logs:/logs nginx-logs
 ```
 Change `-p` parameter to change the exposed port. Format for the same `-p host-port:container-port`
 
