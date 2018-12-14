@@ -32,7 +32,7 @@ Verify the deployment by navigating to your server address in your preferred bro
 
 Alternatively you can run the container directly by pulling my public docker image as below
 
-### docker run -d -p 80:80 --restart="always" -v /logs:/logs rashiddocker/nginx-logs
+### docker run -d -p 8080:80 --restart="always" -v /logs:/logs rashiddocker/nginx-logs
 
 Change '-p' parameter to change the exposed port. Format for the same -p host-port:container-port
 Change '-v' parameter to change the directory that you would like to browse via browser however files will be always accessible with apending '/logs' to host as 'http://IP:port/logs'
